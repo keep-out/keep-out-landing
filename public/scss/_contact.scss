@@ -36,11 +36,11 @@ section.contact {
                     }
                 }
             }
-            &.social-google-plus {
+            &.social-instagram {
                 a {
-                    background-color: $brand-google-plus;
+                    background-color: $brand-instagram;
                     &:hover {
-                        background-color: darken($brand-google-plus, 5%);
+                        background-color: darken($brand-instagram, 5%);
                     }
                 }
             }
