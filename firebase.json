@@ -1,20 +1,14 @@
 {
-  "rules": {
-    "keys": {
-      ".read": false,
-      ".write": false
-    }
-  },
   "hosting": {
     "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [ {
-      "source": "/addemail", "function": "addemail"
-    } ]
+    ]
+    // "rewrites": [ {
+    //   "source": "/addemail", "function": "addemail"
+    // } ]
   }
 
 }
