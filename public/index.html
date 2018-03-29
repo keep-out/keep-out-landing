@@ -29,7 +29,7 @@
     <!-- Custom styles for this template -->
     <link href="css/new-age.min.css" rel="stylesheet">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <!-- Start of Async Drift Code -->
     <script>
@@ -266,17 +266,17 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script type="text/javascript">
       // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAhQA-3GgM6IaOeNtAb6XqDh3kFJgS0aok",
-        authDomain: "munch-bunch-landing.firebaseapp.com",
-        databaseURL: "https://munch-bunch-landing.firebaseio.com",
-        projectId: "munch-bunch-landing",
-        storageBucket: "munch-bunch-landing.appspot.com",
-        messagingSenderId: "386894835738"
-      };
-      firebase.initializeApp(config);
+      // var config = {
+      //   apiKey: "AIzaSyAhQA-3GgM6IaOeNtAb6XqDh3kFJgS0aok",
+      //   authDomain: "munch-bunch-landing.firebaseapp.com",
+      //   databaseURL: "https://munch-bunch-landing.firebaseio.com",
+      //   projectId: "munch-bunch-landing",
+      //   storageBucket: "munch-bunch-landing.appspot.com",
+      //   messagingSenderId: "386894835738"
+      // };
+      // firebase.initializeApp(config);
 
-      var database = firebase.database();
+      // var database = firebase.database();
 
       $('#contactForm').submit(function(event){
         var $form = $(this);
@@ -288,15 +288,24 @@
 
         console.log(name, email);
 
-        createUser(name, email);
-      })
-
-      function createUser(name, email) {
-        database.ref('users/' + name).set({
+        $.post("addemail",
+        {
           name: name,
           email: email
+        },
+        function(data, status){
+          // alert("Data: " + data + "\nStatus: " + status);
         });
-      }
+
+      });
+
+      // function createUser(name, email) {
+      //   database.ref('users/' + name).set({
+      //     name: name,
+      //     email: email
+      //   });
+      // }
+
     </script>
 
     <!-- Bootstrap core JavaScript -->
