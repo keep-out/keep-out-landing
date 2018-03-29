@@ -420,13 +420,14 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
   color: white;
-  border-color: #ECF0F1;
-  background-color: #ECF0F1;
+  border-color: #A0F3B6;
+  background-color: #A0F3B6;
 }
 
 .btn {
   border-radius: 300px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  background-color: #66746A;
   letter-spacing: 2px;
   text-transform: uppercase;
 }

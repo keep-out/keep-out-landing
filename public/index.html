@@ -29,6 +29,8 @@
     <!-- Custom styles for this template -->
     <link href="css/new-age.css" rel="stylesheet">
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
     <!-- Start of Async Drift Code -->
     <script>
     !function() {
@@ -88,16 +90,16 @@
             <div class="header-content mx-auto">
               <h1 class="mb-5">Find <i>nearby</i> food trucks with Munch Bunch!</h1>
 
-              <form role="form" name="contact-form" id="contact-form" action="process.php">
+              <form role="form" name="contactForm" id="contactForm">
   							<div class="form-group" id="contact-name-group">
   								<label for="contact-name" class="sr-only">Name</label>
-  								<input type="text" class="form-control" id="contact-name" placeholder="Name">
+  								<input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
   							</div>
   							<div class="form-group" id="contact-email-group">
   								<label for="contact-email" class="sr-only">Email</label>
-  								<input type="email" class="form-control" id="contact-email" placeholder="Email">
+  								<input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
   							</div>
-  							<button type="submit" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</button>
+  							<button type="submit" id="submitContact" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</button>
   						</form>
 
               <!-- <a href="#page-top" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a> -->
@@ -264,7 +266,7 @@
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script>
+    <script type="text/javascript">
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyAhQA-3GgM6IaOeNtAb6XqDh3kFJgS0aok",
@@ -275,6 +277,28 @@
         messagingSenderId: "386894835738"
       };
       firebase.initializeApp(config);
+
+      var database = firebase.database();
+
+      $('#contactForm').submit(function(event){
+        var $form = $(this);
+
+        //get the value of the name
+    		var name = $("#name").val();
+        //get the value of the email
+        var email = $("#email").val();
+
+        console.log(name, email);
+
+        createUser(name, email);
+      })
+
+      function createUser(name, email) {
+        database.ref('users/' + name).set({
+          name: name,
+          email: email
+        });
+      }
     </script>
 
     <!-- Bootstrap core JavaScript -->
