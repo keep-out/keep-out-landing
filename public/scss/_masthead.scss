@@ -8,8 +8,8 @@ header.masthead {
 
     color: white;
     background: url('../img/bg-pattern.png'), $theme-secondary;
-    background: url('../img/bg-pattern.png'), -webkit-linear-gradient(to left, $theme-secondary, $theme-tertiary);
-    background: url('../img/bg-pattern.png'), linear-gradient(to left, $theme-secondary, $theme-tertiary);
+    background: url('../img/bg-pattern.png'), -webkit-linear-gradient(to left, $theme-secondary, $theme-primary);
+    background: url('../img/bg-pattern.png'), linear-gradient(to left, $theme-secondary, $theme-primary);
     .header-content {
         max-width: 500px;
         margin-bottom: 100px;
@@ -26,6 +26,9 @@ header.masthead {
         .screen img {
             border-radius: 3px;
         }
+    }
+    #submitContact {
+        margin-left: 3px;
     }
     @media (min-width: 992px) {
         height: 100vh;

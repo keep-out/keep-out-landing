@@ -1,5 +1,6 @@
 {
   "projects": {
-    "prod": "munch-bunch-landing"
+    "prod": "munch-bunch-landing",
+    "default": "munch-bunch-landing"
   }
 }

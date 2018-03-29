@@ -1,8 +1,8 @@
 // Bootstrap overrides for this template
 .bg-primary {
     background: $theme-primary;
-    background: -webkit-linear-gradient($theme-primary, darken($theme-primary, 5%));
-    background: linear-gradient($theme-primary, darken($theme-primary, 5%));
+    background: -webkit-linear-gradient($theme-primary,darken($theme-primary,20%));
+    background: linear-gradient($theme-primary,darken($theme-primary,20%));
 }
 
 .text-primary {
@@ -29,6 +29,7 @@
 }
 
 .btn {
+    background-color: $btn-color;
     border-radius: 300px;
     @include alt-font;
 }

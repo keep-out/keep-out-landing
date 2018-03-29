@@ -5,11 +5,11 @@
     @include transition-all;
     @include heading-font;
     .navbar-brand {
-        color: $theme-primary;
+        color: $theme-tertiary;
         @include heading-font;
         &:hover,
         &:focus {
-            color: darken($theme-primary, 10%);
+            color: darken($theme-tertiary, 10%);
         }
     }
     .navbar-toggler {
@@ -63,14 +63,14 @@
                 color: $gray-darker;
                 &:hover,
                 &:focus {
-                    color: $theme-primary;
+                    color: $theme-tertiary;
                 }
             }
             .navbar-nav > li > a,
             .navbar-nav > li > a:focus {
                 color: $gray-darker;
                 &:hover {
-                    color: $theme-primary;
+                    color: $theme-tertiary;
                 }
             }
         }
